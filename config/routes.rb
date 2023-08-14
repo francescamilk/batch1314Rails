@@ -1,6 +1,18 @@
 Rails.application.routes.draw do
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  # map every action a user can take in the app
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  # request > router > controller ...
+  # verb '/path', to 'controller_name#action_name'
+  
+  # get '/', to: 'pages#home'
+  root to: 'pages#home'
+
+  # [GET] "/about"
+  get '/aboutus', to: 'pages#about', as: 'about'
+
+  # get   '/patients/:id', to: 'patients#show'
+  # verb  '/path',         to: 'controller#action'
+
+  # [GET] "/contact"
+  get '/contact', to: 'pages#contact'
 end

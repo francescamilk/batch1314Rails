@@ -1,0 +1,12 @@
+<h1>Contact Us</h1>
+
+<form action="<%= contact_path %>" method="get">
+    <input type="text" name="student" placeholder="Type a name...">
+    <button type="submit">GO</button>
+</form>
+
+<ul>
+    <% @students.each do |student| %>
+        <li><%= student.capitalize %></li>
+    <% end %>
+</ul>
